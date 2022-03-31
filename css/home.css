@@ -1,0 +1,31 @@
+/*
+    FONTES
+*/
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=DM+Mono:wght@400;500&family=Nunito:wght@400;500&family=Open+Sans:wght@400;500&family=Poppins:wght@400;500&display=swap');
+
+/* 
+    FORMATAÇÃO DO BODY
+*/
+body {
+    background: url(/assets/logo-projeto.png);
+    background-repeat: no-repeat;
+    background-size: 110vh;
+    background-position: 40px 40px;
+    min-height: 80vh;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    color: rgb(105, 104, 104);
+}
+
+
+/*
+    FORMATAÇÃO DO FOOTER DAS PÁGINAS
+*/
+.footer {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 25px;
+    color: rgb(0, 0, 0);
+}

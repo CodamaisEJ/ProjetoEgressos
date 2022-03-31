@@ -1,0 +1,94 @@
+/*    PÁGINA INICIAL - LOGIN    */
+
+.container {
+    
+    width: 700px;
+    min-height: 400px;
+    margin: 180px auto 80px;
+    border: 1.2px solid rgb(192, 192, 192);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#formulario {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'DM Mono', monospace;
+    font-size: 16px;
+    padding-right: 50px;
+}
+
+/* adicionando margin entre o label e o input */
+#label-email {
+    margin-right: 10px;
+}
+
+#label-password {
+    margin-right: 20px;
+}
+
+/* Formatação dos inputs */
+#email, #password {
+    width: 250px;
+    height: 20px;
+    padding: 12px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    border-color: rgb(192, 192, 192); 
+    border-width: 1px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+/* Adicionando margin superior e inferior entre os labels/inputs "e-mail" e "senha" */
+#email {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#button {
+    width: 278px;
+    height: 40px;
+    margin-left:75px;
+    font-size: 15px;
+    border-radius: 8px;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    color: rgb(196, 196, 196);
+}
+
+#button:hover {
+    cursor: pointer;
+}
+
+/* Adicionando cor no texto do Botão */
+#entrar {
+    color: rgb(94, 94, 94);
+}
+
+/* Adição de margin e flexibilização na div que contém 'cadastrar' e 'esqueci minha senha' */
+.opcoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 75px;
+}
+
+/* Margin para centralizar e alinhar a div .opcoes */
+.register {
+    margin-right: 75px;
+}
+
+/* Formatação de texto da div .opcoes */
+.register, .forgot-password {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+/* Remoção de sublinhado e adição de cor nas opções de "esqueci minha senha" e "cadastrar" */
+#cadastro, #esqueci-minha-senha {
+    text-decoration: none;
+    color: rgb(145, 142, 142);
+}

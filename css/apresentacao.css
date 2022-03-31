@@ -1,0 +1,33 @@
+/*
+    SEGUNDA PÁGINA - APRESENTAÇÃO
+*/
+
+#apresentacao {
+    color: rgb(105, 104, 104);
+    text-decoration: underline;
+}
+
+.container-main {
+    font-family: 'Arvo', serif;
+    border: 1px solid rgba(221,221,221) ;
+    opacity: 30px;
+    width: 80vw;
+    min-width: none;
+    min-height: 30vw;
+    position: relative;
+    margin: 20px auto;
+    padding: 60px 0 30px 90px;
+    flex-direction: row;
+}
+
+.paragrafo {
+    width: 580px;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 20px
+}
+
+.video {
+    width: 580px;
+    margin-top: 40px;
+}
