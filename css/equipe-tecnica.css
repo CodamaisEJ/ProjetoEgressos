@@ -1,0 +1,53 @@
+/*
+    QUARTA PÁGINA - EQUIPE TÉCNICA
+*/
+
+#equipe-tecnica {
+    color: rgb(105, 104, 104);
+    text-decoration: underline;
+}
+
+.container-main{
+    padding: 60px 0 30px 30px;
+    font-family: 'Arvo', serif;
+    border: 1px solid rgba(221,221,221) ;
+    opacity: 30px;
+    width: 1152px;
+    min-width: none;
+    min-height: 30vw;
+    position: relative;
+    margin: 20px auto;
+ /*    padding: 60px 0 30px 90px;*/
+    flex-direction: row;
+}
+
+
+
+.img-ifb {
+    height: 120px;
+    float: left;
+    margin: 0 10px;
+}
+
+
+.container-2 {
+    margin-top: 20px;
+}
+
+.descricao {
+    text-transform: uppercase;
+    font-family: 'Arvo', serif;
+    font-size: 16px;
+}
+
+
+hr {
+    margin: 70px 18px 0 15px;
+
+}
+
+.elemento-hr {
+    width: 180vh;
+    max-width: 175vh;
+
+}
