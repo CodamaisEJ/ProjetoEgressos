@@ -1,0 +1,74 @@
+/*
+    CONFIGURAÇÃO GLOBAL DAS TELAS "APRESENTAÇÃO, METODOLOGIA, EQUIPE TÉCNICA E CONTATOS"
+
+    font-family: 'Arvo', serif;
+    font-family: 'DM Mono', monospace;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+*/
+
+.container {
+    min-width: 1140px;
+    min-height: 700px;  
+}
+
+.login {
+    position: relative;
+    top: 43px;
+    right: 58px;
+}
+
+#button-login {
+    position:relative;
+    left: 90%;
+    width: 105px;
+    height: 40px;
+    color: rgb(196, 196, 196);
+    border:rgb(196, 196, 196);
+    border-radius: 4px;
+}
+
+#button-login:hover {
+    cursor: pointer;
+}
+
+#span-login {
+    color: rgb(138, 138, 138);
+    text-transform: uppercase;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    position: relative;
+    left: -3px;
+}
+
+.navegacao {
+    margin: 90px 60px 0;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(94, 135, 173);
+}
+
+.navegacao li {
+    margin: 0 12px  0;
+    font-family: 'DM Mono', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    align-items: center;
+}
+
+#span-li{
+    margin-left: 20px;
+}
+
