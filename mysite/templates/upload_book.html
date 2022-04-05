@@ -1,12 +1,23 @@
 {% extends 'base.html' %}
 
-{% load crispy_forms_tags %}
 
 {% block content %}
-  <h2>Upload book</h2>
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form|crispy }}
-    <button type="submit" class="btn btn-primary">Upload book</button>
+   
+    <input type="hidden" name="csrfmiddlewaretoken" value="Q8d71q4TCTbHG3uVjxtCOXqaVxMqVX37pPWymG6K9m4BZVJYhZ9utVgxJ4QRNWF6">
+
+    <input type="text" name="title" maxlength="100" class="textinput textInput form-control" required="" id="id_title">
+
+
+   <input type="text" name="author" maxlength="100" class="textinput textInput form-control" required="" id="id_author">
+
+
+
+   <input type="file" name="pdf" class="clearablefileinput" required="" id="id_pdf">
+    <button type="submit" class="b">Upload book</button>
   </form>
+
+
+  
 {% endblock %}

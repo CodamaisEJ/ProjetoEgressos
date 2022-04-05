@@ -36,6 +36,12 @@ def upload(request):
 
 def book_list(request):
     books = Book.objects.all()
+    if request.method == 'POST':
+        form = BookForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+    else:
+        form = BookForm()       
     return render(request, 'book_list.html', {
         'books': books
     })

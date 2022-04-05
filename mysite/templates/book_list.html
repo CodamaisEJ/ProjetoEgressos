@@ -1,41 +1,52 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+   
+    <input type="hidden" name="csrfmiddlewaretoken" value="Q8d71q4TCTbHG3uVjxtCOXqaVxMqVX37pPWymG6K9m4BZVJYhZ9utVgxJ4QRNWF6">
+    <input type="file" name="pdf" class="clearablefileinput" required="" id="id_pdf">
 
-  {% block content_header %}
-    <h2>Books</h2>
-    <p>
-      <a href="{% url 'upload_book' %}" class="btn btn-primary">Upload book</a>
-    </p>
-  {% endblock %}
+    <div id="organize">
 
-  <table class="table mb-0">
+      <select class="form-select" aria-label="Default select example" name="title" id="id_title">
+        <option selected >SELECIONE</option>
+        <option value="MEI">MEI</option>
+        <option value="SUBSEQ">SUBSEQ</option>
+        
+      </select>
+    
+
+
+    <input type="text" name="author" maxlength="100" class="textinput textInput form-control" required="" id="id_author" placeholder="ANO DE REFERÊNCIA (CONCLUSÃO)">
+    </div>
+
+
+   
+    <button type="submit" class="b">CARREGAR DADOS</button>
+  </form>
+
+
+  <table class="table mb-0" id="tabela">
     <thead>
       <tr>
-        <th>Cover</th>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Download</th>
-        <th>Delete</th>
+        <th>NOME DA BASE</th>
+        <th>DATA UPLOAD</th>
+        <th>EDIÇÃO</th>
       </tr>
     </thead>
     <tbody>
       {% for book in books %}
+
+      
         <tr>
-          <td>
-            {% if book.cover %}
-              <img src="{{ book.cover.url }}" alt="{{ book.title }}" style="width:100px;">
-            {% else %}
-              <span class="text-muted">No cover</span>
-            {% endif %}
+
+          <td >
+            <a id="url" href="{{ book.pdf.url }}">{{ book.pdf }}</a>
+           
           </td>
-          <td>{{ book.title }}</td>
           <td>{{ book.author }}</td>
-          <td>
-            <a href="{{ book.pdf.url }}" class="btn btn-primary btn-sm" target="_blank">
-              Download PDF
-            </a>
-          </td>
           <td>
             <form method="post" action="{% url 'delete_book' book.pk %}">
               {% csrf_token %}

@@ -5,28 +5,159 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/blog.rtl.css' %}">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
+  <style>
+    body {
+      background-color: #fff;
+     }
+
+     #input-ano{
+      margin-left: 35%;
+      margin-top: -3%;
+      width: 56%;
+     }
+
+     #select {
+      display: flex;
+      text-transform: none;
+      margin-top: 5%;
+      margin-left: 16%;
+      height: 30px;
+      width: 150px;
+  }
+     .blog-header {
+      
+      border-bottom: none;
+    }
+    #navbar{
+      margin-left: 16%;
+      margin-top: -3%;
+      font-size: 24px;
+    }
+
+    #navbarSupportedContent{
+      color: #0d6efd;
+    }
+   
+    #btn-upload{
+      margin-left: 40%;
+      display: flex;
+      margin-top: 5%;
+    }
+
+    #input-file{
+      padding-top: 1%;
+    }
+
+    
+    .card-body{
+    height: 250px;
+    }
+
+    .card-csv{
+      height: 221px;
+      width: 800px;
+      }
+
+    .footer{
+      
+      width: 100%;
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+
+    #id_pdf{
+      padding-top: 1%;
+      margin-left: 35%;
+    }
+
+    #id_title{
+      width: 21%;
+      margin-top: 42px;
+      margin-left: 10%;
+      height: 35px;
+
+    }
+
+    #id_author{
+      width: 33%;
+      margin-top: 42px;
+      margin-left: 10%;
+      height: 20%;
+    }
+
+    .b{
+      margin-left: 35%;
+      margin-top: 35px;
+    }
+
+    #tabela{
+      margin-top: 80px;
+    }
+
+    #organize{
+      display: flex;
+    }
+
+    #url{
+      
+      height: 100%;
+      font-family: sans-serif
+    }
+
+    .align-items-center{
+      align-items: none;
+    }
+    
+    #Logo {
+      vertical-align: middle;
+      border-style: none;
+      padding-left: 15%;
+      padding-top: 5%;
+    }
+    #upload{
+      display: flex;
+    }
+  </style>
   <title>{% block title %}My Site{% endblock %}</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color:#decdc3">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <img id="Logo" src="{% static 'assets/logo-projeto.png' %}" alt="Logo">
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark" href="#">Sair</a>
+      </div>
+    
+  </header>
+
+  <nav class="navbar navbar-expand-lg  mb-4" id="navbar" style="background-color:#fff">
     <div class="container">
-      <a class="navbar-brand" href="{% url 'home' %}">My Site</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color:#0d6efd">
+
+        <ul class="navbar-nav"  id="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">Home</a>
+            <a class="nav-link" href="{% url 'home' %}">INÍCIO |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'upload' %}">Simple Upload</a>
+            <a class="nav-link" href="{% url 'home' %}">APRESENTAÇÃO |</a>
+            
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'book_list' %}">Model Forms Upload</a>
+            <a class="nav-link" href="{% url 'upload' %}">METODOLOGIA |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'class_book_list' %}">Model Forms Upload (CBV)</a>
+            <a class="nav-link" href="{% url 'book_list' %}">EQUIPE TÉCNICA |</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'class_book_list' %}">CONTATOS </a>
           </li>
         </ul>
       </div>
@@ -44,6 +175,11 @@
       </div>
     </div>
   </div>
+
+ 
+  <footer class="footer">
+    <h2>Desenvolvido por Codamais &copy; 2022</h2>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
